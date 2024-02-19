@@ -51,20 +51,6 @@ function Home() {
                             </td>
                         </tr>
                     )) }
-
-
-                    {/* {companies.map((company , index)=>{
-                        return (
-                            // <div key={item.id}>I am one Object in the Array {item}</div>
-                            <tr key={company.id}>
-                                <td>{index}.</td>
-                                <td>{company.name}</td>
-                                <td>{company.email}</td>
-                                <td>{company.address}</td>
-                                <td>{company.website}</td>
-                            </tr>
-                        )
-                    })} */}
                 </tbody>
             </table>
         </div>
