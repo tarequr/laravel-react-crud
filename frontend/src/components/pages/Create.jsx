@@ -1,6 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
+import http from '../../http'
 
 function Create() {
+  const [inputs, setInputs] = useState({});
+  const handelChange = (event) => {
+    const name = event.target.name;
+    const value = event.target.value;
+    setInputs(values => ({ ...values, [name]: value }));
+  }
+
   return (
     <div>
 
