@@ -6,6 +6,7 @@ import "bootstrap/dist/css/bootstrap.css"
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 import Home from './components/pages/Home'
 import Create from './components/pages/Create'
+import Edit from './components/pages/Edit'
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Routes>
             <Route path='/' element={<Home/>}/>
             <Route path='/create' element={<Create/>}/>
+            <Route path='/edit/:id' element={<Edit/>}/>
           </Routes>
         </div>
       </div>

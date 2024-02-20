@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import http from '../../http'
 
+import { Link } from 'react-router-dom'
+
 function Home() {
     const [companies, setCompanies] = useState([]);
     const [error, setError] = useState(null);
@@ -47,7 +49,7 @@ function Home() {
                             <td>{company.address}</td>
                             <td>{company.website}</td>
                             <td>
-                                <a href="#" className='btn btn-sm btn-success'>Edit</a>
+                                <Link to={{ pathname:"/edit/" + company.id  }} className='btn btn-sm btn-success'>Edit</Link>
                             </td>
                         </tr>
                     )) }
