@@ -50,6 +50,7 @@ function Home() {
                             <td>{company.website}</td>
                             <td>
                                 <Link to={{ pathname:"/edit/" + company.id  }} className='btn btn-sm btn-success'>Edit</Link>
+                                <Link to={{ pathname:"/show/" + company.id  }} className='btn btn-sm btn-info pl-5'>Show</Link>
                             </td>
                         </tr>
                     )) }

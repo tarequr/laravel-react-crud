@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 import Home from './components/pages/Home'
 import Create from './components/pages/Create'
 import Edit from './components/pages/Edit'
+import Show from './components/pages/Show'
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
             <Route path='/' element={<Home/>}/>
             <Route path='/create' element={<Create/>}/>
             <Route path='/edit/:id' element={<Edit/>}/>
+            <Route path='/show/:id' element={<Show/>}/>
           </Routes>
         </div>
       </div>
