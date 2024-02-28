@@ -14,12 +14,12 @@ function Edit(props) {
   const fetchCompany = () => {
     http.get('/companies/'+id)
     .then((response) => {
-      console.log('Sabbir:' + response);
+      // console.log(response.data.data);
       setInputs({
-        name: response.data.name,
-        email: response.data.email,
-        address: response.data.address,
-        website: response.data.website,
+        name: response.data.data.name,
+        email: response.data.data.email,
+        address: response.data.data.address,
+        website: response.data.data.website,
       });
     })
     .catch(error => {
@@ -38,7 +38,7 @@ function Edit(props) {
 
   const submitForm = (event) => {
     // console.log(inputs);
-    http.post('/companies/'+id,inputs)
+    http.put('/companies/'+id,inputs)
     .then((response) => {
       navigate('/');
     })
