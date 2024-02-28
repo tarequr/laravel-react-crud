@@ -11,6 +11,7 @@ function Home() {
         fetchAllCompanies();
     },[]);
 
+    // get all companies data 
     const fetchAllCompanies = () => {
         http.get('/companies')
         .then(response => {
@@ -21,6 +22,18 @@ function Home() {
         });
     }
 
+    // delete company
+    const deleteCompany = (id) => {
+        http.delete('/companies/'+id)
+        .then(response => {
+            fetchAllCompanies();
+        })
+        .catch(error => {
+            setError(error);
+        });
+    }
+
+    // show error message
     if (error) {
         return <div>Error: {error.message}</div>;
     }
@@ -50,7 +63,8 @@ function Home() {
                             <td>{company.website}</td>
                             <td>
                                 <Link to={{ pathname:"/edit/" + company.id  }} className='btn btn-sm btn-success'>Edit</Link>
-                                <Link to={{ pathname:"/show/" + company.id  }} className='btn btn-sm btn-info pl-5'>Show</Link>
+                                <Link to={{ pathname:"/show/" + company.id  }} className='btn btn-sm btn-info'>Show</Link>
+                                <button type='button' className='btn btn-sm btn-danger' onClick={() => { deleteCompany(company.id) }}>Delete</button>
                             </td>
                         </tr>
                     )) }

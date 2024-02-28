@@ -37,16 +37,16 @@ function Show(props) {
         <div className='row justify-content-center'>
         <h2 className='mt-5 text-center'>Show Companies</h2>
             <div className='card p-3 col-sm-6 justify-content-center'>
-                <h2>Name</h2>
+                <h4>Name</h4>
                 <p>{ inputs.name }</p>
 
-                <h2>Email</h2>
+                <h4>Email</h4>
                 <p>{ inputs.email }</p>
 
-                <h2>Address</h2>
+                <h4>Address</h4>
                 <p>{ inputs.address }</p>
 
-                <h2>Website</h2>
+                <h4>Website</h4>
                 <p>{ inputs.website }</p>
             </div>
         </div>
